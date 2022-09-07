@@ -7,7 +7,7 @@ const transactionModel = require('./collection/transactionModel')
 const etheriumPriceModel = require('./collection/etheriumPriceModel')
 app.use(express.json())
 
-mongoose.connect("mongodb+srv://shree:kX0Pc508NsGLpaQw@shreyasingh.fivskon.mongodb.net/admin?authSource=admin&replicaSet=atlas-1wybbx-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true", {
+mongoose.connect("mongodb+srv://subhamsidharth:2NoDZjzEUgRaFunQ@cluster0.f3bng.mongodb.net/Crypto_account?retryWrites=true&w=majority", {
     useNewUrlParser: true
 })
     .then(function () {
@@ -79,3 +79,5 @@ app.get('/Details',async function (req,res){
 })
 
 app.listen(3000, function () { return console.log(`Express is running on port 3000`) });
+
+
