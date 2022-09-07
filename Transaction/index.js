@@ -7,7 +7,7 @@ const transactionModel = require('./collection/transactionModel')
 const etheriumPriceModel = require('./collection/etheriumPriceModel')
 app.use(express.json())
 
-mongoose.connect("mongodb+srv://subhamsidharth:2NoDZjzEUgRaFunQ@cluster0.f3bng.mongodb.net/Products_management?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://shree:kX0Pc508NsGLpaQw@shreyasingh.fivskon.mongodb.net/admin?authSource=admin&replicaSet=atlas-1wybbx-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true", {
     useNewUrlParser: true
 })
     .then(function () {
