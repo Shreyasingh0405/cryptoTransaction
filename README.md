@@ -1,31 +1,28 @@
-# Backend-interview-task_Shreya-Singh
-Develop a Server Side Application to fetch Crypto Transactions of a user
-Mandatory Tasks:-
-Task 1:
-1. Develop an API using Node.js to fetch the crypto transactions of a user.
-2. You can use the Etherscan API(https://docs.etherscan.io/api-endpoints/accounts) to
-fetch the list of “Normal” transactions for a user. You can use this address for testing:-
-0xce94e5621a5f7068253c42558c147480f38b5e0d. You will have to create your own
-free API Key for testing purposes.
-3. The input for the API will be the address of a user. The output would be the list of
-transactions for this address. You would also have to store these transactions against
-this address in a database, preferably MongoDB.
-Task 2:
-1. Build a system within the same server to fetch the price of Ethereum every 10
-minutes and store it in the database.
-2. You can use this API for the same:-
-https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=inr
-Task 3:
-1. Develop a `GET` API for a user where they give their address as an input and get
-their current balance and current price of ether as output.
-2. The balance should be calculated from the transactions of the user. If the “from”
-address is of the user, the “value” property gets added to the user’s balance. If the
-“to” address is of the user, the “value” property gets deducted from the user’s
-balance. These transactions are the ones that were fetched in the previous tasks.
-Please host your code on GitHub.
-Optional Tasks:-
-1. Deploy your database using MongoDB Atlas or other similar tools.
-2. Deploy your backend using platforms like Heroku or any cloud platform like AWS,
-GCP or Azure and expose the API to the public
-Once you’re done with the task, please send over the GitHub and Deployed Link(if done) to
-guna@koinx.com with the subject `Backend Interview Task - <Your Name>
+# 🚀 Crypto Transactions Fetcher
+
+Welcome to the **Crypto Transactions Fetcher**! This project is a Node.js-based server-side application that allows you to fetch, store, and manage cryptocurrency transactions effortlessly. Whether you're exploring your crypto transactions or tracking the latest Ethereum price, this app has got you covered! 🌟
+
+## 🌟 Features
+
+1. **🔍 Fetch Crypto Transactions**: Easily fetch the "Normal" transactions of a user from the Ethereum blockchain using the [Etherscan API](https://docs.etherscan.io/api-endpoints/accounts). Just input the user's address, and you're good to go!  
+2. **💾 Store Transactions in MongoDB**: All fetched transactions are stored in a MongoDB database for quick and easy access.  
+3. **⏰ Get Real-time Ethereum Price**: Automatically fetches the current price of Ethereum every 10 minutes using the [CoinGecko API](https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=inr) and stores it in the database.  
+4. **📊 Calculate Current Balance and Price**: Input a user's address to get their current balance, calculated based on their transaction history, and the latest Ethereum price in INR.
+
+## 📬 How to Use
+
+### 1. Fetch Crypto Transactions
+
+- **Endpoint**: `GET /api/transactions/:address`  
+- **Description**: Provide a user's Ethereum address to fetch and store their transactions in the database.
+
+### 2. Fetch Ethereum Price Every 10 Minutes
+
+- This happens automatically in the background using a scheduled job. The price is stored in the database and updated every 10 minutes.
+
+### 3. Get User Balance and Current Ethereum Price
+
+- **Endpoint**: `GET /api/user-balance/:address`  
+- **Description**: Provide a user's Ethereum address to get their current balance (calculated from their transactions) and the latest Ethereum price.
+
+---
